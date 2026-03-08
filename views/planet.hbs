@@ -1,0 +1,54 @@
+<!-- Insert the site navigation menu from menu.hbs -->
+{{> menu}}
+<!-- Page heading showing the planet name -->
+<h1 class="ui center aligned header">
+  <!-- Globe icon beside the heading -->
+  <i class="globe icon"></i>
+  <div class="content">
+    <!-- Planet name coming from the planet object -->
+    {{planet.name}}
+    <!-- Planet type shown as a subtitle -->
+    <div class="sub header">{{planet.type}}</div>
+  </div>
+</h1>
+<!-- Main page container -->
+<div class="ui container">
+   <!-- Grid layout with two columns -->
+  <div class="ui stackable grid">
+    <!-- Left column for the planet image -->
+    <div class="eight wide column">
+      <img class="ui fluid rounded image" src="{{planet.image}}">
+    </div>
+    <!-- Right column for text information -->
+    <div class="eight wide column">
+       <!-- Planet overview section -->
+      <div class="ui segment">
+        <h3 class="ui header">Overview</h3>
+        <!-- Planet description pulled from the data -->
+        <p>{{planet.description}}</p>
+      </div>
+      <!-- Planet facts section -->
+      <div class="ui segment">
+        <h3 class="ui header">Planet Facts</h3>
+         <!-- List of key facts -->
+        <div class="ui list">
+          <!-- Distance from the sun -->
+          <div class="item"><strong>Distance from Sun:</strong> {{planet.distance}} ({{planet.au}})</div>
+          <!-- Orbital speed -->
+          <div class="item"><strong>Orbital Speed:</strong> {{planet.orbitalSpeed}}</div>
+          <!-- Number of moons -->
+          <div class="item"><strong>Moons:</strong> {{planet.moons}}</div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+<!-- Image credit footer -->
+<div style="margin-top:20px; font-size:0.9em; text-align:center;">
+  Images courtesy of 
+  <a href="https://www.nasa.gov/" target="_blank">NASA</a>
+</div>

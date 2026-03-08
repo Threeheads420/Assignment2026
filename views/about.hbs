@@ -1,0 +1,62 @@
+<!-- This file contains the navigation bar used on every page -->
+{{> menu}}
+<!-- Main page heading section -->
+<h1 class="ui center aligned header">
+    <!-- Icon displayed beside the page title -->
+  <i class="info circle icon"></i>
+  <div class="content">
+    <!-- The page title sent from the route -->
+    {{title}}
+     <!-- The website title coming from the site data -->
+    <div class="sub header">{{site.title}}</div>
+  </div>
+</h1>
+<!-- Short introduction text for the page -->
+<p class="ui center aligned">{{site.intro}}</p>
+<!-- Main container for the first content section -->
+<div class="ui container" style="margin-top: 1rem;">
+ <!-- Box (segment) that holds the "vastness" section -->
+  <div class="ui raised segment">
+    <!-- Section heading -->
+    <h2 class="ui header">{{site.vastness.heading}}</h2>
+     <!-- Loop through the paragraphs stored in site.vastness.paragraphs
+         and display each one as a paragraph -->
+    {{#each site.vastness.paragraphs}}
+      <p>{{this}}</p>
+    {{/each}}
+     <!-- Vertical list showing the scale line items -->
+    <div class="ui vertical steps" style="margin-top: 1rem;">
+      <!-- Loop through the scaleLine array -->
+      {{#each site.vastness.scaleLine}}
+        <div class="step">
+          <div class="content">
+            <!-- Each item in the scaleLine list -->
+            <div class="title">{{this}}</div>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+
+  </div>
+
+</div>
+<!-- Container for the story sections about scale in the universe -->
+<div class="ui container">
+  <!-- Loop through each item in the scaleStory array -->
+  {{#each scaleStory}}
+   <!-- Card/segment for one story item -->
+    <div class="ui raised segment">
+      <!-- Title of the story -->
+      <h3 class="ui header">{{title}}</h3>
+       <!-- Image for the story -->
+      <img class="ui fluid rounded image" src="{{image}}">
+       <!-- Caption describing the image -->
+      <p style="margin-top: 1rem;">{{caption}}</p>
+    </div>
+  {{/each}}
+</div>
+<!-- Credit for the images used -->
+<div style="margin-top:20px; font-size:0.9em; text-align:center;">
+  Astronomy images courtesy of 
+  <a href="https://www.nasa.gov/" target="_blank">NASA</a>
+</div>

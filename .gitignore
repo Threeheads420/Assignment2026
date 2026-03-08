@@ -1,2 +1,9 @@
+# Ignore the node_modules folder.
+# This folder contains installed packages from npm and can be recreated
+# anytime using "npm install", so it should not be uploaded to GitHub.
 node_modules
+
+# Ignore the package-lock.json file.
+# This file records the exact versions of installed dependencies.
+# It is often ignored in coursework projects to avoid unnecessary updates.
 package-lock.json

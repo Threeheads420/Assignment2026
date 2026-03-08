@@ -1,0 +1,92 @@
+{
+  "planets": [
+    {
+      "id": "1",
+      "name": "Mercury",
+      "type": "Terrestrial",
+      "moons": 0,
+      "distance": "57.9 million km",
+      "au": "0.39 AU",
+      "image": "/images/planets/mercury.jpg",
+      "orbitalSpeed": "47.4 km/s",
+"description": "Mercury is the closest planet to the Sun and the smallest planet in the Solar System. Its surface is heavily cratered and experiences extreme temperature changes because it has almost no atmosphere to retain heat."
+    },
+    {
+      "id": "2",
+      "name": "Venus",
+      "type": "Terrestrial",
+      "moons": 0,
+      "distance": "108.2 million km",
+      "au": "0.72 AU",
+      "image": "/images/planets/venus.jpg",
+      "orbitalSpeed": "35.0 km/s",
+      "description": "Venus is the second planet from the Sun and is similar in size to Earth. However, its thick carbon dioxide atmosphere creates an extreme greenhouse effect, making it the hottest planet in the Solar System."
+    },
+    {
+      "id": "3",
+      "name": "Earth",
+      "type": "Terrestrial",
+      "moons": 1,
+      "distance": "149.6 million km",
+      "au": "1 AU",
+      "image": "/images/planets/earth.jpg",
+      "orbitalSpeed": "29.78 km/s",
+      "description": "Earth is the third planet from the Sun and the only known world to support life. Its atmosphere, oceans and magnetic field protect life and regulate the planet's climate."
+    },
+    {
+      "id": "4",
+      "name": "Mars",
+      "type": "Terrestrial",
+      "moons": 2,
+      "distance": "227.9 million km",
+      "au": "1.52 AU",
+      "image": "/images/planets/mars.jpg",
+      "orbitalSpeed": "24.1 km/s",
+      "description": "Mars is often called the Red Planet because of iron oxide dust covering its surface. It has the largest volcano and canyon in the Solar System and is a primary target for future human exploration."
+    },
+    {
+      "id": "5",
+      "name": "Jupiter",
+      "type": "Gas Giant",
+      "moons": 95,
+      "distance": "778.5 million km",
+      "au": "5.2 AU",
+      "image": "/images/planets/jupiter.jpg",
+      "orbitalSpeed": "13.1 km/s",
+      "description": "Jupiter is the largest planet in the Solar System and is a gas giant composed mostly of hydrogen and helium. It is famous for the Great Red Spot, a massive storm that has been raging for centuries."
+    },
+    {
+      "id": "6",
+      "name": "Saturn",
+      "type": "Gas Giant",
+      "moons": 146,
+      "distance": "1.43 billion km",
+      "au": "9.58 AU",
+      "image": "/images/planets/saturn.jpg",
+      "orbitalSpeed": "9.7 km/s",
+      "description": "Saturn is a gas giant best known for its spectacular ring system made of ice and rock particles. It has dozens of moons, including Titan, which has lakes of liquid methane."
+    },
+    {
+      "id": "7",
+      "name": "Uranus",
+      "type": "Ice Giant",
+      "moons": 27,
+      "distance": "2.87 billion km",
+      "au": "19.2 AU",
+      "image": "/images/planets/uranus.jpg",
+      "orbitalSpeed": "6.8 km/s",
+      "description": "Uranus is an ice giant that rotates on its side due to an extreme axial tilt of about 98 degrees. This unusual tilt causes extreme seasons that last for many years."
+    },
+    {
+      "id": "8",
+      "name": "Neptune",
+      "type": "Ice Giant",
+      "moons": 14,
+      "distance": "4.50 billion km",
+      "au": "30.05 AU",
+      "image": "/images/planets/neptune.jpg",
+      "orbitalSpeed": "5.4 km/s",
+      "description": "Neptune is the most distant planet in the Solar System and is known for its deep blue colour and extremely powerful winds. Some of the fastest winds ever recorded in the Solar System occur in Neptune’s atmosphere."
+    }
+  ]
+}

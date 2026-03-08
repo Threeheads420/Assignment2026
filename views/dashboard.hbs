@@ -1,0 +1,59 @@
+<!-- Insert the navigation menu from the menu.hbs partial.
+     This is the site menu that appears at the top of every page. -->
+{{> menu}}
+<!-- Main page title -->
+<h1 class="ui center aligned header">
+  <!-- Globe icon beside the heading -->
+  <i class="globe icon"></i>
+  <div class="content">
+    <!-- Page title passed from the route -->
+    {{title}}
+    <!-- Subtitle shown under the main title -->
+    <div class="sub header">Solar System Planet Overview</div>
+  </div>
+</h1>
+<!-- Container holding the planet cards -->
+<div class="ui three stackable centered cards">
+   <!-- Loop through the planets array -->
+  {{#each planets}}
+    <!-- Individual planet card -->
+    <div class="ui raised card">
+      <!-- Planet image -->
+      <div class="image">
+        <img src="{{image}}">
+      </div>
+        <!-- Main content of the card -->
+      <div class="content">
+        <!-- Planet name -->
+        <div class="header">{{name}}</div>
+        <!-- Planet type label (gas giant, terrestrial, etc.) -->
+        <div class="meta">
+          <span class="ui small blue label">{{type}}</span>
+        </div>
+         <!-- Distance information -->
+        <div class="description" style="margin-top:10px;">
+          <strong>Distance from Sun:</strong><br>
+          {{distance}} ({{au}})
+        </div>
+      </div>
+       <!-- Bottom section of the card -->
+      <div class="extra content">
+       <!-- Moon count -->
+        <i class="moon icon"></i>
+          {{moons}} Moon(s)
+          <!-- Button linking to the detailed planet page -->
+        <a class="ui right floated icon button" href="/planet/{{id}}">
+  <i class="info circle icon"></i>
+</a>
+       
+      </div>
+
+    </div>
+  {{/each}}
+
+</div>
+<!-- Image credit footer -->
+<div style="margin-top:20px; font-size:0.9em; text-align:center;">
+  Images courtesy of 
+  <a href="https://www.nasa.gov/" target="_blank">NASA</a>
+</div>

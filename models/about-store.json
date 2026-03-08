@@ -1,0 +1,32 @@
+{
+  "site": {
+    "title": "Planet Tracker",
+    "intro": "Planet Tracker is a web application that explores the eight planets of our Solar System. The larger images on this page are used intentionally to reflect the enormous scale of space. Astronomy deals with distances so great that they are difficult to imagine, so the visuals are given more room in order to better convey the size of the Solar System, the Milky Way galaxy, and the wider observable universe."
+  },
+  "vastness": {
+  "heading": "Understanding the Vast Scale of Space",
+  "paragraphs": [
+    "The Solar System may seem enormous to us, but in the context of the universe it is incredibly small. One way to understand this scale is through comparison. If the entire Solar System were reduced to the size of a tennis ball, our Milky Way galaxy would be roughly the size of North America. The galaxy contains hundreds of billions of stars, many with their own planetary systems.",
+    "Our Solar System is located in one of the spiral arms of the Milky Way galaxy, far from its centre. The Milky Way is about 100,000 light-years across and is just one of billions of galaxies in the observable universe. When we look up at the night sky, we are seeing only a tiny fraction of what exists."
+  ],
+  "scaleLine": ["Universe", "Milky Way Galaxy", "Solar System", "Earth"]
+  },
+  "scaleStory": [
+    {
+      "title": "The Observable Universe",
+      "image": "/images/observable.jpg",
+      "caption": "An illustration of the observable universe. Our galaxy is a tiny part of a vast cosmic structure."
+    },
+    {
+      "title": "The Milky Way",
+      "image": "/images/milky_way.jpg",
+      "caption": "The Milky Way is a barred spiral galaxy about 100,000 light-years across. Our Solar System is located on a spiral arm."
+    },
+    {
+      "title": "Our Solar System",
+      "image": "/images/solar_system.jpg",
+      "caption": "Our Solar System contains eight planets orbiting the Sun. This app tracks the planets and key facts about each one."
+    }
+  ]
+  
+}

@@ -1,11 +1,67 @@
+<!-- Insert the navigation menu from menu.hbs -->
 {{> menu}}
+<!-- Main container for the homepage content -->
+<div class="ui container" style="margin-top: 1.5rem;">
+   <!-- Hero image at the top of the page(A large, prominent 
+   image placed near the top of a page to immediately grab attention and introduce the content.
+   But if you ask me then it's the developer who's picture this should be!!!) -->
+  <img class="ui fluid rounded image" src="../images/jamesw1.jpg" alt="James Webb Space Telescope Image">
+   <!-- Main introduction segment -->
+  <div class="ui very padded raised segment" style="margin-top: 1.5rem;">
+    <!-- Page title section -->
+    <h1 class="ui header">
+      <!-- Rocket icon beside the title -->
+      <i class="rocket icon"></i>
+      <div class="content">
+        <!-- Main project title -->
+        Planet Tracker
+        <!-- Subtitle describing the site -->
+        <div class="sub header">Explore the planets of our Solar System</div>
+      </div>
+    </h1>
 
-<section class="ui center aligned middle aligned segment">
-  
-  <h2>Steven Condra's App</h2>
+    <p>
+      <!-- Short introduction text -->
+      Explore the eight planets and discover key facts about each world, from Mercury to Neptune.
+    </p>
+    <!-- Button linking to the main planet dashboard -->
+    <a class="ui primary button" href="/dashboard">
+      <i class="globe icon"></i>
+      Explore the Planets
+    </a>
+    <!-- Button linking to the about page -->
+    <a class="ui button" href="/about">
+      <i class="info circle icon"></i>
+      About
+    </a>
+    <!-- Divider separating the introduction from the author section -->
+    <div class="ui divider"></div>
+    <!-- Author information section -->
+    <div class="ui items">
+      <div class="item">
+        <div class="ui small image">
+          <!-- Author profile image -->
+          <img src="/images/me.png" alt="Site Author">
+        </div>
+        <!-- Author details -->
+        <div class="content">
+          <!-- Author name -->
+          <div class="header">Created by Steven Condra</div>
+          <!-- Short description of the project -->
+          <div class="description">
+            A Planet Tracker project exploring the scale and motion of our Solar System.
+            The images are displayed at a large size to help visualise the immense distances
+            involved. To put this into perspective, if our Solar System were the size of a pea,
+            the Milky Way galaxy would be roughly the size of Europe. If that entire galaxy
+            were then shrunk back down to the size of a pea, the observable universe would
+            be roughly the size of the Earth. Beyond that lies the rest of the universe,
+            whose true size is still unknown and may extend far beyond anything we can
+            currently measure.
+          </div>
+        </div>
+      </div>
+    </div>
 
-  <p>
-    You can use this start view (along with the matching start controller and start route) as the starting point for your "welcome" view (i.e. your app's homepage). Read the assignment spec to see what other views you should add.
-  </p>
+  </div>
 
-</section>
+</div>

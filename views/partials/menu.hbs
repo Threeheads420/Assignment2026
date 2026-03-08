@@ -1,17 +1,16 @@
+<!-- Navigation menu displayed at the top of every page -->
 <nav class="ui stackable menu">
-  
-  <header class="ui header item"> 
-    <!--     Change the link below to suit your app -->
-    <a href="/"> CA1 App </a>
-  </header>
-  
-  <div class="right menu">
-    <!--     Add links to your pages here -->
-    
-  </div>
-  
+   <!-- Link to the Home page -->
+  <a class="item" href="/">Home</a>
+  <!-- Link to the Dashboard page showing all planets -->
+  <a class="item" href="/dashboard">Dashboard</a>
+  <!-- Link to the About page -->
+  <a class="item" href="/about">About</a>
+
 </nav>
 
 <script>
- document.querySelector("#{{id}}").classList.add("active");
+   // Highlights the active menu item based on the page id.
+
+ document.querySelector("#{{id}}")?.classList.add("active");
 </script>
