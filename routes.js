@@ -30,7 +30,9 @@ import { dashboardController } from "./controllers/dashboard.js";
 import { aboutController } from "./controllers/about.js";
 // Import the controller used to display information about a single planet
 import { planetController } from "./controllers/planet.js";
-
+import { moonController } from "./controllers/moon.js";
+import { upload } from "./multer-config.js";
+import moonStore from "./models/moon-store.js";
 // Route for the home page ("/")
 // Calls the createView function in the start controller
 router.get('/', start.createView);
@@ -44,4 +46,21 @@ router.get('/about', aboutController.index);
 // ":id" is a route parameter used to identify which planet to display
 router.get("/planet/:id", planetController.index);
 // Export the router so it can be used by the main application
+router.post("/moons/search", moonController.search);
+// Route for the moons page
+router.get("/moons/edit/:id", moonController.editForm);
+router.post("/moons/edit/:id", moonController.update);
+router.get("/moons", moonController.index);
+router.get("/moons/add", moonController.addForm);
+router.post("/moons/add", upload.single("image"), moonController.add);
+router.get("/moons/:id", function(req, res) {
+  const moon = moonStore.getMoonById(req.params.id);
+
+  res.render("moon", {
+    title: moon.name,
+    moon: moon
+  });
+
+});
+router.get("/moons/delete/:id", moonController.delete);
 export default router;

@@ -1,0 +1,41 @@
+{{> menu}}
+
+<h1 class="ui center aligned header">{{title}}</h1>
+
+<div class="ui container">
+  <form class="ui form" action="/moons/add" method="POST" enctype="multipart/form-data">
+    <div class="field">
+      <label>Moon Name</label>
+      <input type="text" name="name" placeholder="Moon name" required>
+    </div>
+    <div class="field">
+      <label>Planet it Orbits</label>
+      <input type="text" name="planet" placeholder="Planet name" required>
+    </div>
+    <div class="field">
+      <label>Distance from Planet</label>
+      <input type="text" name="distance" placeholder="e.g. 384,400 km">
+    </div>
+    <div class="field">
+      <label>Diameter</label>
+      <input type="text" name="diameter" placeholder="e.g. 3,474 km">
+    </div>
+    <div class="field">
+      <label>Discovered By</label>
+      <input type="text" name="discoveredBy" placeholder="e.g. Galileo">
+    </div>
+    <div class="field">
+      <label>Year Discovered</label>
+      <input type="text" name="yearDiscovered" placeholder="e.g. 1610">
+    </div>
+    <div class="field">
+  <label>Image</label>
+  <input type="file" name="image" accept="image/*" required>
+  </div>
+    <div class="field">
+      <label>Image Courtesy Of</label>
+      <input type="text" name="courtesy" placeholder="e.g. NASA" required>
+    </div>
+    <button class="ui button primary" type="submit">Add Moon</button>
+  </form>
+</div>

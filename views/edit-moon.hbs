@@ -1,0 +1,49 @@
+{{> menu}}
+
+<h1 class="ui center aligned header">{{title}}</h1>
+
+<div class="ui container">
+  <form class="ui form" action="/moons/edit/{{moon.id}}" method="POST">
+    <div class="field">
+      <label>Moon Name</label>
+      <input type="text" name="name" value="{{moon.name}}" required>
+    </div>
+
+    <div class="field">
+      <label>Planet it Orbits</label>
+      <input type="text" name="planet" value="{{moon.planet}}" required>
+    </div>
+
+    <div class="field">
+      <label>Distance from Planet</label>
+      <input type="text" name="distance" value="{{moon.distance}}">
+    </div>
+
+    <div class="field">
+      <label>Diameter</label>
+      <input type="text" name="diameter" value="{{moon.diameter}}">
+    </div>
+
+    <div class="field">
+      <label>Discovered By</label>
+      <input type="text" name="discoveredBy" value="{{moon.discoveredBy}}">
+    </div>
+
+    <div class="field">
+      <label>Year Discovered</label>
+      <input type="text" name="yearDiscovered" value="{{moon.yearDiscovered}}">
+    </div>
+
+    <div class="field">
+      <label>Image Path</label>
+      <input type="text" name="image" value="{{moon.image}}" required>
+    </div>
+
+    <div class="field">
+      <label>Image Courtesy Of</label>
+      <input type="text" name="courtesy" value="{{moon.courtesy}}">
+    </div>
+
+    <button class="ui primary button" type="submit">Update Moon</button>
+  </form>
+</div>

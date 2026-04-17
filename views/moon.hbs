@@ -1,0 +1,34 @@
+{{> menu}}
+
+<h1 class="ui center aligned header">{{moon.name}}</h1>
+
+<div class="ui container">
+
+  <div class="ui two stackable cards">
+
+    <!-- Image Card -->
+    <div class="ui card">
+      <div class="image">
+        <img src="{{moon.image}}">
+      </div>
+    </div>
+
+    <!-- Details Card -->
+    <div class="ui card">
+      <div class="content">
+        <div class="header">{{moon.name}}</div>
+        <div class="meta">Orbits {{moon.planet}}</div>
+
+        <div class="description" style="margin-top: 1rem;">
+          <p><strong>Distance from Planet:</strong> {{moon.distance}}</p>
+          <p><strong>Diameter:</strong> {{moon.diameter}}</p>
+          <p><strong>Discovered By:</strong> {{moon.discoveredBy}}</p>
+          <p><strong>Year Discovered:</strong> {{moon.yearDiscovered}}</p>
+          <p><strong>Image Courtesy Of:</strong> {{moon.courtesy}}</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>

@@ -11,11 +11,23 @@ html {
 body {
   font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
   margin: 2em;
-  background-color: lightgrey;
+
+  background-image: url("/images/stars.gif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+/*fix after gif background*/
+.ui.center.aligned.header {
+  background-color: rgba(0, 0, 0, 0.45);
+  padding: 0.5em 1em;
+  border-radius: 10px;
+  display: inline-block;
 }
 /* Set a fixed height for card images on the dashboard */
 .ui.card .image {
-  height: 250px;
+  aspect-ratio: 1 / 1;
   overflow: hidden;
 }
 /* Ensure images fill the card area without distortion */

@@ -1,16 +1,44 @@
-<!-- Navigation menu displayed at the top of every page -->
-<nav class="ui stackable menu">
-   <!-- Link to the Home page -->
-  <a class="item" href="/">Home</a>
-  <!-- Link to the Dashboard page showing all planets -->
-  <a class="item" href="/dashboard">Dashboard</a>
-  <!-- Link to the About page -->
-  <a class="item" href="/about">About</a>
+<nav class="ui inverted stackable menu">
+
+  <a id="home" href="/" class="item">
+    <i class="home icon"></i>
+    Home
+  </a>
+
+  <a id="dashboard" href="/dashboard" class="item">
+    <i class="grid layout icon"></i>
+    Dashboard
+  </a>
+
+  <a id="about" href="/about" class="item">
+    <i class="info circle icon"></i>
+    About
+  </a>
+
+  <a id="moons" href="/moons" class="item">
+    <i class="moon icon"></i>
+    Moons
+  </a>
+
+  <div class="right menu">
+    <a href="/signup" class="item">
+      <i class="user plus icon"></i>
+      Sign Up
+    </a>
+
+    <a href="/login" class="item">
+      <i class="sign in alternate icon"></i>
+      Login
+    </a>
+
+    <a href="/logout" class="item">
+      <i class="sign out alternate icon"></i>
+      Logout
+    </a>
+  </div>
 
 </nav>
 
 <script>
-   // Highlights the active menu item based on the page id.
-
- document.querySelector("#{{id}}")?.classList.add("active");
+  document.querySelector("#{{id}}")?.classList.add("active");
 </script>

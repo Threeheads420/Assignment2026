@@ -1,14 +1,14 @@
 {
   "site": {
     "title": "Planet Tracker",
-    "intro": "Planet Tracker is a web application that explores the eight planets of our Solar System. The larger images on this page are used intentionally to reflect the enormous scale of space. Astronomy deals with distances so great that they are difficult to imagine, so the visuals are given more room in order to better convey the size of the Solar System, the Milky Way galaxy, and the wider observable universe."
+    "intro": ["Planet Tracker is a web application that explores the eight planets and their moons in our Solar System. The larger images on this page are used intentionally to reflect the enormous scale of space. Astronomy deals with distances so great that they are difficult to imagine, so the visuals are given more room in order to better convey the size of the Solar System, the Milky Way galaxy, and the wider observable universe. Users can also contribute to the application by adding their own moons. Each moon can include a name, the planet it orbits, and other details including an image, allowing the collection to grow over time. This makes the app interactive and continually expanding, giving users the opportunity to build their own catalogue of moons and explore how different worlds relate to one another."]
   },
   "vastness": {
   "heading": "Understanding the Vast Scale of Space",
   "paragraphs": [
     "The Solar System may seem enormous to us, but in the context of the universe it is incredibly small. One way to understand this scale is through comparison. If the entire Solar System were reduced to the size of a tennis ball, our Milky Way galaxy would be roughly the size of North America. The galaxy contains hundreds of billions of stars, many with their own planetary systems.",
-    "Our Solar System is located in one of the spiral arms of the Milky Way galaxy, far from its centre. The Milky Way is about 100,000 light-years across and is just one of billions of galaxies in the observable universe. When we look up at the night sky, we are seeing only a tiny fraction of what exists."
-  ],
+    "Our Solar System is located in one of the spiral arms of the Milky Way galaxy, far from its centre. The Milky Way is about 100,000 light-years across and is just one of billions of galaxies in the observable universe. When we look up at the night sky, we are seeing only a tiny fraction of what exists."],
+  
   "scaleLine": ["Universe", "Milky Way Galaxy", "Solar System", "Earth"]
   },
   "scaleStory": [

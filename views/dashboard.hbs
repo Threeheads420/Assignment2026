@@ -42,9 +42,13 @@
         <i class="moon icon"></i>
           {{moons}} Moon(s)
           <!-- Button linking to the detailed planet page -->
-        <a class="ui right floated icon button" href="/planet/{{id}}">
-  <i class="info circle icon"></i>
-</a>
+      <div style="display: flex; align-items: center; justify-content: flex-end; gap: 6px;">
+  <span style="font-size: 0.8em;">More info</span>
+  <i class="arrow right icon" style="font-size: 0.8em;"></i>
+  <a class="ui icon button" href="/planet/{{id}}">
+    <i class="info circle icon"></i>
+  </a>
+</div>
        
       </div>
 

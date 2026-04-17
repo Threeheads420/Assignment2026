@@ -1,0 +1,42 @@
+{{> menu}}
+
+<h1 class="ui center aligned header">{{title}}</h1>
+<div class="ui center aligned container" style="margin-bottom: 1rem;">
+  <form class="ui form" action="/moons/search" method="POST">
+    <div class="ui action input">
+      <input type="text" name="searchTerm" placeholder="Search moons by name">
+      <button class="ui button" type="submit">Search</button>
+    </div>
+  </form>
+</div>
+<div class="ui center aligned container" style="margin-bottom: 1rem;">
+  <a href="/moons/add" class="ui primary button">Add a new moon</a>
+</div>
+
+<div class="ui container">
+  <div class="ui four doubling stackable cards">
+
+    {{#each moons}}
+      <div class="ui card">
+
+        <a href="/moons/{{id}}">
+          <div class="image">
+            <img src="{{image}}">
+          </div>
+        </a>
+
+        <div class="content">
+          <div class="header">{{name}}</div>
+          <div class="meta">Orbits {{planet}}</div>
+        </div>
+
+        <div class="extra content">
+          <a href="/moons/edit/{{id}}" class="ui tiny blue button">Edit</a>
+          <a href="/moons/delete/{{id}}" class="ui tiny red button">Delete</a>
+        </div>
+
+      </div>
+    {{/each}}
+
+  </div>
+</div>
