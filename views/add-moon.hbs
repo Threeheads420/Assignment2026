@@ -1,41 +1,58 @@
 {{> menu}}
 
-<h1 class="ui center aligned header">{{title}}</h1>
+<h1 class="ui center aligned header" style="color: white; text-shadow: 2px 2px 6px black;">
+  {{title}}
+</h1>
 
 <div class="ui container">
-  <form class="ui form" action="/moons/add" method="POST" enctype="multipart/form-data">
+  <form class="ui form" action="/moons/add" method="POST" enctype="multipart/form-data" style="color: white;">
+
     <div class="field">
-      <label>Moon Name</label>
+      <label style="color: white; text-shadow: 2px 2px 6px black;">What's the Moon's Name?</label>
       <input type="text" name="name" placeholder="Moon name" required>
     </div>
+
     <div class="field">
-      <label>Planet it Orbits</label>
+      <label style="color: white; text-shadow: 2px 2px 6px black;">Which Planet does it Orbit?</label>
       <input type="text" name="planet" placeholder="Planet name" required>
     </div>
+
     <div class="field">
-      <label>Distance from Planet</label>
+      <label style="color: white; text-shadow: 2px 2px 6px black;">Do you know its Distance from the Planet?</label>
       <input type="text" name="distance" placeholder="e.g. 384,400 km">
     </div>
+
     <div class="field">
-      <label>Diameter</label>
+      <label style="color: white; text-shadow: 2px 2px 6px black;">Do you know its Diameter?</label>
       <input type="text" name="diameter" placeholder="e.g. 3,474 km">
     </div>
+
     <div class="field">
-      <label>Discovered By</label>
+      <label style="color: white; text-shadow: 2px 2px 6px black;">Do you know who discovered it?</label>
       <input type="text" name="discoveredBy" placeholder="e.g. Galileo">
     </div>
+
     <div class="field">
-      <label>Year Discovered</label>
+      <label style="color: white; text-shadow: 2px 2px 6px black;">Do you know the Year it was Discovered?</label>
       <input type="text" name="yearDiscovered" placeholder="e.g. 1610">
     </div>
+
     <div class="field">
-  <label>Image</label>
-  <input type="file" name="image" accept="image/*" required>
-  </div>
+      <label style="color: white; text-shadow: 2px 2px 6px black;">Image</label>
+      <input type="file" name="image" accept="image/*" required>
+    </div>
+
     <div class="field">
-      <label>Image Courtesy Of</label>
+      <label style="color: white; text-shadow: 2px 2px 6px black;">Where did the image come from?</label>
       <input type="text" name="courtesy" placeholder="e.g. NASA" required>
     </div>
-    <button class="ui button primary" type="submit">Add Moon</button>
+
+    <div class="field">
+      <label style="color: white; text-shadow: 2px 2px 6px black;">Who is putting this moon up? (optional)</label>
+      <input type="text" name="credit" placeholder="e.g. NASA / Your Name">
+    </div>
+
+    <button class="ui primary button" type="submit">Add Moon</button>
+
   </form>
 </div>

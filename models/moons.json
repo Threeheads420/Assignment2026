@@ -1,32 +1,42 @@
 [
   {
-    "id": "1",
     "name": "Luna",
     "planet": "Earth",
-    "distance": "Unknown",
-    "diameter": "",
-    "discoveredBy": "",
-    "yearDiscovered": "",
-    "courtesy": "",
-    "image": "/images/moons/luna.jpg"
+    "distance": "384,400 km",
+    "diameter": "3,474",
+    "discoveredBy": "Everyone!",
+    "yearDiscovered": "Ancient history",
+    "courtesy": "Steven Condra",
+    "image": "/images/moons/luna.jpg",
+    "id": "1"
   },
   {
-    "id": "2",
     "name": "Phobos",
     "planet": "Mars",
-    "image": "/images/moons/phobos.jpg"
+    "distance": "9,378 km",
+    "diameter": "22.2 km",
+    "discoveredBy": "Asaph Hall",
+    "yearDiscovered": "1877",
+    "Courtesy": "NASA",
+    "image": "/images/moons/phobos.jpg",
+    "id": "2"
   },
   {
-    "id": "4",
     "name": "Europa",
     "planet": "Jupiter",
-    "image": "/images/moons/europa.jpg"
+    "distance": "670,900 km",
+    "diameter": "3,121 km",
+    "discoveredBy": "Galileo Galilei",
+    "yearDiscovered": "1610",
+    "courtesy": "NASA",
+    "image": "/images/moons/europaa.jpg",
+    "id": "4"
   },
   {
     "name": "Miranda",
     "planet": "Uranus",
     "distance": "129,900 km",
-    "diameter": "471km",
+    "diameter": "471 km",
     "discoveredBy": "Gerard Kuiper",
     "yearDiscovered": "1948",
     "courtesy": "NASA",
@@ -45,14 +55,38 @@
     "id": "10"
   },
   {
-    "name": "dfghj",
-    "planet": "Mars",
-    "distance": "3456",
-    "diameter": "32456",
-    "discoveredBy": "someone else",
-    "yearDiscovered": "1980",
-    "courtesy": "nasa",
-    "image": "/images/moons/1985U1.jpg",
+    "name": "Ganymede",
+    "planet": "Jupiter",
+    "distance": "1070400",
+    "diameter": "5268 km",
+    "discoveredBy": "Galileo Galilei",
+    "yearDiscovered": "1610",
+    "courtesy": "Nasa/ESA",
+    "image": "/images/moons/Ganymedee.webp",
     "id": "6"
+  },
+  {
+    "name": "Callisto",
+    "planet": "Jupiter",
+    "distance": "1,882,700 km",
+    "diameter": "4,8211 km",
+    "discoveredBy": "Galileo Galilei",
+    "yearDiscovered": "1610",
+    "courtesy": "NASA",
+    "credit": "Steve",
+    "image": "/images/moons/Callisto.jpg",
+    "id": "7"
+  },
+  {
+    "name": "REX",
+    "planet": "Pluto",
+    "distance": "Unknown",
+    "diameter": "ask an astrolger",
+    "discoveredBy": "Gerard Kuiper",
+    "yearDiscovered": "1985",
+    "courtesy": "Nasa/ESA",
+    "credit": "Danny",
+    "image": "/images/moons/Uranus.gif",
+    "id": "8"
   }
 ]

@@ -12,13 +12,13 @@ body {
   font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
   margin: 2em;
 
-  background-image: url("/images/stars.gif");
+  background-image: url("/images/starss.gif");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
-/*fix after gif background*/
+/*fix after gif background*
 .ui.center.aligned.header {
   background-color: rgba(0, 0, 0, 0.45);
   padding: 0.5em 1em;
@@ -34,5 +34,14 @@ body {
 .ui.card .image img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+}
+.highlight-yellow {
+  color: yellow;
+  font-weight: bold;
+}
+.ui.raised.segment img {
+  max-height: 500px;
+  width: 100%;
   object-fit: cover;
 }

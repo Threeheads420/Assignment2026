@@ -1,7 +1,12 @@
 // Enables strict mode in JavaScript.
 // This helps catch common coding mistakes and enforces safer coding practices.
 'use strict';
+
+import session from "express-session";
+
 // Imports the Express framework used to create the web server.
+
+
 import express from 'express';
 // Imports the application routes defined in routes.js.
 // These routes connect URL paths to the appropriate controllers.
@@ -21,7 +26,11 @@ const port = 3000;
 // This allows access to images, CSS, and client-side JavaScript.
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: false }));
-
+app.use(session({
+  secret: "planet-tracker-secret",
+  resave: false,
+  saveUninitialized: false
+}));
 // Creates the Handlebars engine with the .hbs file extension.
 const handlebars = create({extname: '.hbs'});
 // Registers Handlebars as the template engine.

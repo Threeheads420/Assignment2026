@@ -1,0 +1,29 @@
+{
+  "users": [
+    {
+      "id": "1776542370755",
+      "email": "stevencondra1971@gmail.com",
+      "password": "student"
+    },
+    {
+      "id": "1776678264097",
+      "email": "asdfghj@sdfghj",
+      "password": "123456"
+    },
+    {
+      "id": "1776956316878",
+      "email": "wertyu@sdfgh",
+      "password": "123456"
+    },
+    {
+      "id": "1776956473117",
+      "email": "wertyui@gmail.com",
+      "password": "wertyuiop[;lkjhgfdwertyuio"
+    },
+    {
+      "id": "1777806502234",
+      "email": "asdfgh@gmail.com",
+      "password": "123456"
+    }
+  ]
+}

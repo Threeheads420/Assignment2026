@@ -1,0 +1,21 @@
+{{> menu}}
+
+<div class="ui container" style="margin-top: 1.5rem;">
+  <div class="ui raised segment">
+    <h1 class="ui header">Sign Up</h1>
+
+    <form class="ui form" action="/signup" method="POST" autocomplete="off">
+      <div class="field">
+        <label>Email</label>
+        <input type="email" name="email" required autocomplete="off">
+      </div>
+
+      <div class="field">
+        <label>Password</label>
+        <input type="password" name="password" required autocomplete="new-password">
+      </div>
+
+      <button class="ui primary button" type="submit">Sign Up</button>
+    </form>
+  </div>
+</div>

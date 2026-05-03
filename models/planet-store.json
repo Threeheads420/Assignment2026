@@ -10,7 +10,9 @@
       "image": "/images/planets/mercury.jpg",
       "gif": "/images/planets/Mercury.gif",
       "orbitalSpeed": "47.4 km/s",
-"description": "Mercury is the closest planet to the Sun and the smallest planet in the Solar System. Its surface is heavily cratered and experiences extreme temperature changes because it has almost no atmosphere to retain heat."
+      "description": "Mercury is the closest planet to the Sun and the smallest planet in the Solar System. Its surface is heavily cratered and experiences extreme temperature changes because it has almost no atmosphere to retain heat.",
+      "fact": "It has almost no atmosphere, if you were standing there at sunrise, the Sun would appear three times larger than it does on Earth. "
+      
     },
     {
       "id": "2",
@@ -22,7 +24,8 @@
       "image": "/images/planets/venus.jpg",
       "gif": "/images/planets/Venus.gif",
       "orbitalSpeed": "35.0 km/s",
-      "description": "Venus is the second planet from the Sun and is similar in size to Earth. However, its thick carbon dioxide atmosphere creates an extreme greenhouse effect, making it the hottest planet in the Solar System."
+      "description": "Venus is the second planet from the Sun and is similar in size to Earth. However, its thick carbon dioxide atmosphere creates an extreme greenhouse effect, making it the hottest planet in the Solar System.",
+      "fact": "A day on Venus is longer than its year — meaning your next birthday could arrive before the same day has even finished."
     },
     {
       "id": "3",
@@ -34,7 +37,8 @@
       "image": "/images/planets/earth.jpg",
       "gif": "/images/planets/Earth.gif",
       "orbitalSpeed": "29.78 km/s",
-      "description": "Earth is the third planet from the Sun and the only known world to support life. Its atmosphere, oceans and magnetic field protect life and regulate the planet's climate."
+      "description": "Earth is the third planet from the Sun and the only known world to support life. Its atmosphere, oceans and magnetic field protect life and regulate the planet's climate.",
+      "fact": "It’s the only planet not named after a god, yet it’s the only one known to have beings who invent gods (and complain about the weather)."
     },
     {
       "id": "4",
@@ -46,7 +50,8 @@
       "image": "/images/planets/mars.jpg",
       "gif": "/images/planets/Mars.gif",
       "orbitalSpeed": "24.1 km/s",
-      "description": "Mars is often called the Red Planet because of iron oxide dust covering its surface. It has the largest volcano and canyon in the Solar System and is a primary target for future human exploration."
+      "description": "Mars is often called the Red Planet because of iron oxide dust covering its surface. It has the largest volcano and canyon in the Solar System and is a primary target for future human exploration.",
+      "fact": "The tallest volcano in the solar system, Olympus Mons, would make Mount Everest look like a speed bump — it’s roughly the size of Arizona. If you climbed it, the summit would stick above most of the atmosphere, so you could suffocate while admiring the view."
     },
     {
       "id": "5",
@@ -58,7 +63,8 @@
       "image": "/images/planets/jupiter.jpg",
       "gif": "/images/planets/Jupiter.gif",
       "orbitalSpeed": "13.1 km/s",
-      "description": "Jupiter is the largest planet in the Solar System and is a gas giant composed mostly of hydrogen and helium. It is famous for the Great Red Spot, a massive storm that has been raging for centuries."
+      "description": "Jupiter is the largest planet in the Solar System and is a gas giant composed mostly of hydrogen and helium. It is famous for the Great Red Spot, a massive storm that has been raging for centuries.",
+      "fact": "It’s so big it doesn’t really orbit the Sun in the way other planets do; both it and the Sun actually orbit a common point just outside the Sun’s surface. Technically, Jupiter makes the Sun wobble."
     },
     {
       "id": "6",
@@ -70,7 +76,8 @@
       "image": "/images/planets/saturn.jpg",
       "gif": "/images/planets/Saturn.gif",
       "orbitalSpeed": "9.7 km/s",
-      "description": "Saturn is a gas giant best known for its spectacular ring system made of ice and rock particles. It has dozens of moons, including Titan, which has lakes of liquid methane."
+      "description": "Saturn is a gas giant best known for its spectacular ring system made of ice and rock particles. It has dozens of moons, including Titan, which has lakes of liquid methane.",
+      "fact": "It’s less dense than water, meaning if you could find a cosmic bathtub big enough, Saturn would float. (Let’s just ignore the “filling the tub” problem.)"
     },
     {
       "id": "7",
@@ -82,7 +89,8 @@
       "image": "/images/planets/uranus.jpg",
       "gif": "/images/planets/Uranus.gif",
       "orbitalSpeed": "6.8 km/s",
-      "description": "Uranus is an ice giant that rotates on its side due to an extreme axial tilt of about 98 degrees. This unusual tilt causes extreme seasons that last for many years."
+      "description": "Uranus is an ice giant that rotates on its side due to an extreme axial tilt of about 98 degrees. This unusual tilt causes extreme seasons that last for many years.",
+      "fact": "It spins on its side, tilted by about 98 degrees, so its poles get 42 years of sunlight followed by 42 years of darkness. Basically, Uranus throws the ultimate “mood lighting” party for half a century."
     },
     {
       "id": "8",
@@ -94,7 +102,13 @@
       "image": "/images/planets/neptune.jpg",
       "gif": "/images/planets/Neptune.gif",
       "orbitalSpeed": "5.4 km/s",
-      "description": "Neptune is the most distant planet in the Solar System and is known for its deep blue colour and extremely powerful winds. Some of the fastest winds ever recorded in the Solar System occur in Neptune’s atmosphere."
+      "description": "Neptune is the most distant planet in the Solar System and is known for its deep blue colour and extremely powerful winds. Some of the fastest winds ever recorded in the Solar System occur in Neptune’s atmosphere.",
+      "fact": "Winds there can reach 1,200 mph (roughly 2,000 km/h), faster than the speed of sound on Earth. If you stood on Neptune (you wouldn’t), you’d be blasted into space before you could complain about the weather. "
+
+
+
+
+
     }
   ]
 }

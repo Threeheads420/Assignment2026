@@ -6,8 +6,8 @@
   "vastness": {
   "heading": "Understanding the Vast Scale of Space",
   "paragraphs": [
-    "The Solar System may seem enormous to us, but in the context of the universe it is incredibly small. One way to understand this scale is through comparison. If the entire Solar System were reduced to the size of a tennis ball, our Milky Way galaxy would be roughly the size of North America. The galaxy contains hundreds of billions of stars, many with their own planetary systems.",
-    "Our Solar System is located in one of the spiral arms of the Milky Way galaxy, far from its centre. The Milky Way is about 100,000 light-years across and is just one of billions of galaxies in the observable universe. When we look up at the night sky, we are seeing only a tiny fraction of what exists."],
+    "The Solar System may seem enormous to us, but in the context of the universe it is incredibly small. One way to understand this scale is through comparison. If the entire Solar System were reduced to the size of a tennis ball, our Milky Way galaxy would be roughly the size of North America.",
+    " The galaxy contains hundreds of billions of stars, many with their own planetary systems. Our Solar System is located in one of the spiral arms of the Milky Way galaxy, far from its centre. The Milky Way is about 100,000 light-years across and is just one of billions of galaxies in the observable universe. When we look up at the night sky, we are seeing only a tiny fraction of what exists."],
   
   "scaleLine": ["Universe", "Milky Way Galaxy", "Solar System", "Earth"]
   },
@@ -15,18 +15,23 @@
     {
       "title": "The Observable Universe",
       "image": "/images/observable.jpg",
-      "caption": "An illustration of the observable universe. Our galaxy is a tiny part of a vast cosmic structure."
+      "caption": "An illustration of the observable universe. Our galaxy is a tiny part of a vast cosmic structure.<br><br><strong>Fun fact...ish:</strong> At 100 mph, it would take about 300 trillion years to reach the edge of the observable universe. You’d need roughly 1 sextillion litres of petrol, costing around €2 sextillion. Even if every human who has ever lived was born one after another and took turns driving, we would still need another 3.5 trillion people to finish the journey."
     },
     {
       "title": "The Milky Way",
-      "image": "/images/milky_way.jpg",
-      "caption": "The Milky Way is a barred spiral galaxy about 100,000 light-years across. Our Solar System is located on a spiral arm."
+      "image": "/images/milky_way.jpg",                                                                                                                   
+      "caption": "The Milky Way is a barred spiral galaxy about 100,000 light-years across. Our Solar System is located on a spiral arm. It is marked in <span style='color: #ffff00; -webkit-text-stroke: 0.3px black;'>yellow</span>.<br><br><strong>Fun fact...ish:</strong> Driving at 100 mph, it would take around 70 billion years to cross the galaxy. You’d need about 200 quadrillion litres of petrol, costing roughly €360 quadrillion — far more fuel than exists on Earth. So don't forget your cridit card!"
     },
     {
       "title": "Our Solar System",
       "image": "/images/solar_system.jpg",
-      "caption": "Our Solar System contains eight planets orbiting the Sun. This app tracks the planets and key facts about each one."
-    }
+      "caption": "Our Solar System contains eight planets orbiting the Sun. This app tracks the planets and key facts about each one. <br><br><strong>Fun fact...ish:</strong> At 100 mph, it would take over 60 million years to drive from one side of the Solar System to the other. You’d need roughly 200 trillion litres of petrol, costing around €350 trillion."
+    },
+    {
+      "title": "Earth",
+      "image": "/images/Earthh.jpg",
+      "caption": "Earth is our home, our only home, a small but extraordinary world in the vastness of space. <br><br><strong>Fun fact...ish:</strong> Driving around the Earth at 100 km/h would take over 16 days non-stop. You’d burn around 3,000 litres of petrol, costing roughly €5,000 — all just to circle one tiny planet in a vast universe."
+}
   ]
   
 }

@@ -33,6 +33,8 @@ import { planetController } from "./controllers/planet.js";
 import { moonController } from "./controllers/moon.js";
 import { upload } from "./multer-config.js";
 import moonStore from "./models/moon-store.js";
+import signup from "./controllers/signup.js";
+import login from "./controllers/login.js";
 // Route for the home page ("/")
 // Calls the createView function in the start controller
 router.get('/', start.createView);
@@ -53,14 +55,40 @@ router.post("/moons/edit/:id", moonController.update);
 router.get("/moons", moonController.index);
 router.get("/moons/add", moonController.addForm);
 router.post("/moons/add", upload.single("image"), moonController.add);
+router.get("/signup", (request, response) => {
+  response.render("signup", { title: "Sign Up", id: "signup" });
+});
+
+router.post("/signup", signup.createUser);
+
+router.get("/login", (request, response) => {
+  response.render("login", { title: "Login", id: "login" });
+});
+
+
+router.post("/login", login.authenticate);
+
+router.get("/logout", login.logout);
+router.get("/moons/delete/:id", moonController.delete);
 router.get("/moons/:id", function(req, res) {
   const moon = moonStore.getMoonById(req.params.id);
 
+  const planetLinks = {
+    Mercury: "/planet/1",
+    Venus: "/planet/2",
+    Earth: "/planet/3",
+    Mars: "/planet/4",
+    Jupiter: "/planet/5",
+    Saturn: "/planet/6",
+    Uranus: "/planet/7",
+    Neptune: "/planet/8"
+  };
+
   res.render("moon", {
     title: moon.name,
-    moon: moon
+    moon: moon,
+    planetLink: planetLinks[moon.planet]
   });
-
 });
-router.get("/moons/delete/:id", moonController.delete);
+
 export default router;

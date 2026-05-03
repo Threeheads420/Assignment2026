@@ -1,54 +1,67 @@
-<!-- Insert the site navigation menu from menu.hbs -->
 {{> menu}}
-<!-- Page heading showing the planet name -->
-<h1 class="ui center aligned header">
-  <!-- Globe icon beside the heading -->
-  <i class="globe icon"></i>
-  <div class="content">
-    <!-- Planet name coming from the planet object -->
-    {{planet.name}}
-    <!-- Planet type shown as a subtitle -->
-    <div class="sub header">{{planet.type}}</div>
-  </div>
-</h1>
-<!-- Main page container -->
-<div class="ui container">
-   <!-- Grid layout with two columns -->
-  <div class="ui stackable grid">
-    <!-- Left column for the planet image -->
+
+<div class="ui raised segment" style="margin-top: 1.5rem;">
+  <div class="ui stackable two column grid">
+
     <div class="eight wide column">
-      <img class="ui fluid rounded image" src="{{planet.gif}}">
+      <h1 class="ui header">
+        <i class="globe icon"></i>
+        <div class="content">
+          {{planet.name}}
+          <div class="sub header">{{planet.type}}</div>
+        </div>
+      </h1>
     </div>
-    <!-- Right column for text information -->
+
+    <div class="eight wide column" style="display: flex; align-items: center; justify-content: center;">
+      <div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
+        <a href="/planet/1"><img src="/images/planets/Mercury.gif" style="width:40px; height:40px; border-radius:50%;"></a>
+        <a href="/planet/2"><img src="/images/planets/Venus.gif" style="width:40px; height:40px; border-radius:50%;"></a>
+        <a href="/planet/3"><img src="/images/planets/Earth.gif" style="width:40px; height:40px; border-radius:50%;"></a>
+        <a href="/planet/4"><img src="/images/planets/Mars.gif" style="width:40px; height:40px; border-radius:50%;"></a>
+        <a href="/planet/5"><img src="/images/planets/Jupiter.gif" style="width:40px; height:40px; border-radius:50%;"></a>
+        <a href="/planet/6"><img src="/images/planets/Saturn.gif" style="width:40px; height:40px; border-radius:50%;"></a>
+        <a href="/planet/7"><img src="/images/planets/Uranus.gif" style="width:40px; height:40px; border-radius:50%;"></a>
+        <a href="/planet/8"><img src="/images/planets/Neptune.gif" style="width:40px; height:40px; border-radius:50%;"></a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="ui container">
+  <div class="ui stackable grid">
+
     <div class="eight wide column">
-       <!-- Planet overview section -->
+      <div class="ui raised segment" style="padding: 1px;">
+       <img class="ui fluid rounded image" src="{{planet.gif}}" style="height: 400px; object-fit: cover;">
+      </div>
+    </div>
+
+    <div class="eight wide column">
       <div class="ui segment">
         <h3 class="ui header">Overview</h3>
-        <!-- Planet description pulled from the data -->
         <p>{{planet.description}}</p>
       </div>
-      <!-- Planet facts section -->
+
       <div class="ui segment">
         <h3 class="ui header">Planet Facts</h3>
-         <!-- List of key facts -->
         <div class="ui list">
-          <!-- Distance from the sun -->
           <div class="item"><strong>Distance from Sun:</strong> {{planet.distance}} ({{planet.au}})</div>
-          <!-- Orbital speed -->
           <div class="item"><strong>Orbital Speed:</strong> {{planet.orbitalSpeed}}</div>
-          <!-- Number of moons -->
           <div class="item"><strong>Moons:</strong> {{planet.moonStats}}</div>
         </div>
-
+        <div class="ui segment">
+  
+  <p>{{planet.fact}}</p>
+</div>
       </div>
-
     </div>
 
   </div>
-
 </div>
-<!-- Image credit footer -->
-<div style="margin-top:20px; font-size:0.9em; text-align:center;">
-  Images courtesy of 
-  <a href="https://www.nasa.gov/" target="_blank">NASA</a>
+
+<div class="ui raised segment" style="margin-top: 1.5rem; text-align: center;">
+  .gif's courtesy of 
+  <a>Planet imagery sourced from public astronomy archives.</a>
 </div>

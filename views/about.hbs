@@ -12,8 +12,32 @@
   {{#each site.intro}}
     <p class="ui center aligned">{{this}}</p>
   {{/each}}
+<div class="ui raised segment">
+  <h2 class="ui header">App Statistics</h2>
 
-  <div class="ui divider"></div>
+  <div class="ui four statistics">
+    <div class="statistic">
+      <div class="value">{{stats.totalPlanets}}</div>
+      <div class="label">Planets</div>
+    </div>
+
+    <div class="statistic">
+      <div class="value">{{stats.totalMoons}}</div>
+      <div class="label">Moons</div>
+    </div>
+
+    <div class="statistic">
+      <div class="value">{{stats.terrestrialPlanets}}</div>
+      <div class="label">Terrestrial</div>
+    </div>
+
+    <div class="statistic">
+      <div class="value">{{stats.giantPlanets}}</div>
+      <div class="label">Giants</div>
+    </div>
+  </div>
+</div>
+  
 
   <h2 class="ui header">{{vastness.heading}}</h2>
 
@@ -26,7 +50,7 @@
       {{/each}}
     </div>
 
-    <!-- RIGHT SIDE (your box stays here) -->
+    <!-- RIGHT SIDE  -->
     <div class="six wide column">
       <div class="ui raised segment">
         <h3 class="ui header">
@@ -55,7 +79,7 @@
     <div class="ui raised segment">
       <h3 class="ui header">{{title}}</h3>
       <img class="ui fluid rounded image" src="{{image}}">
-      <p style="margin-top: 1rem;">{{caption}}</p>
+      <p style="margin-top: 1rem;">{{{caption}}}</p>
     </div>
   {{/each}}
 
