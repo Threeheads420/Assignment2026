@@ -1,21 +1,26 @@
-{{> menu}}
+<form class="ui form" action="/signup" method="POST" autocomplete="off">
 
-<div class="ui container auth-page">
-  <div class="ui raised segment">
-    <h1 class="ui header">Sign Up</h1>
+  <div class="two fields">
+    <div class="field">
+      <label>First Name</label>
+      <input type="text" name="firstName" required>
+    </div>
 
-    <form class="ui form" action="/signup" method="POST" autocomplete="off">
-      <div class="field">
-        <label>Email</label>
-        <input type="email" name="email" required autocomplete="off">
-      </div>
-
-      <div class="field">
-        <label>Password</label>
-        <input type="password" name="password" required autocomplete="new-password">
-      </div>
-
-      <button class="ui primary button" type="submit">Sign Up</button>
-    </form>
+    <div class="field">
+      <label>Last Name</label>
+      <input type="text" name="lastName" required>
+    </div>
   </div>
-</div>
+
+  <div class="field">
+    <label>Email</label>
+    <input type="email" name="email" required autocomplete="off">
+  </div>
+
+  <div class="field">
+    <label>Password</label>
+    <input type="password" name="password" required autocomplete="new-password">
+  </div>
+
+  <button class="ui primary button" type="submit">Sign Up</button>
+</form>

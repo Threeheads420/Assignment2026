@@ -20,7 +20,14 @@ if (password.length < 6) {
 };
 
     userStore.addUser(user);
-    response.redirect("/login");
+    request.session.user = {
+  id: user.id,
+  firstName: user.firstName
+};
+
+request.session.save(() => {
+  response.redirect("/about");
+});
   }
 };
 
