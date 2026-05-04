@@ -15,14 +15,55 @@
 
     <div class="eight wide column" style="display: flex; align-items: center; justify-content: center;">
       <div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
-        <a href="/planet/1"><img src="/images/planets/Mercury.gif" style="width:40px; height:40px; border-radius:50%;"></a>
-        <a href="/planet/2"><img src="/images/planets/Venus.gif" style="width:40px; height:40px; border-radius:50%;"></a>
-        <a href="/planet/3"><img src="/images/planets/Earth.gif" style="width:40px; height:40px; border-radius:50%;"></a>
-        <a href="/planet/4"><img src="/images/planets/Mars.gif" style="width:40px; height:40px; border-radius:50%;"></a>
-        <a href="/planet/5"><img src="/images/planets/Jupiter.gif" style="width:40px; height:40px; border-radius:50%;"></a>
-        <a href="/planet/6"><img src="/images/planets/Saturn.gif" style="width:40px; height:40px; border-radius:50%;"></a>
-        <a href="/planet/7"><img src="/images/planets/Uranus.gif" style="width:40px; height:40px; border-radius:50%;"></a>
-        <a href="/planet/8"><img src="/images/planets/Neptune.gif" style="width:40px; height:40px; border-radius:50%;"></a>
+
+        {{!--Mercury icon with label--}}
+        <a href="/planet/1" style="text-align:center; color: grey;">
+          <img src="/images/planets/Mercury.gif" style="width:40px; height:40px; border-radius:50%;">
+          <div style="font-size:0.7em;">Mercury</div>
+        </a>
+
+        {{!--Venus icon with label--}}
+        <a href="/planet/2" style="text-align:center; color: grey;">
+          <img src="/images/planets/Venus.gif" style="width:40px; height:40px; border-radius:50%;">
+          <div style="font-size:0.7em;">Venus</div>
+        </a>
+
+        {{!--Earth icon with label--}}
+        <a href="/planet/3" style="text-align:center; color: grey;">
+          <img src="/images/planets/Earth.gif" style="width:40px; height:40px; border-radius:50%;">
+          <div style="font-size:0.7em;">Earth</div>
+        </a>
+
+        {{!--Mars icon with label--}}
+        <a href="/planet/4" style="text-align:center; color: grey;">
+          <img src="/images/planets/Mars.gif" style="width:40px; height:40px; border-radius:50%;">
+          <div style="font-size:0.7em;">Mars</div>
+        </a>
+
+        {{!--Jupiter icon with label--}}
+        <a href="/planet/5" style="text-align:center; color: grey;">
+          <img src="/images/planets/Jupiter.gif" style="width:40px; height:40px; border-radius:50%;">
+          <div style="font-size:0.7em;">Jupiter</div>
+        </a>
+
+        {{!--Saturn icon with label--}}
+        <a href="/planet/6" style="text-align:center; color: grey;">
+          <img src="/images/planets/Saturn.gif" style="width:40px; height:40px; border-radius:50%;">
+          <div style="font-size:0.7em;">Saturn</div>
+        </a>
+
+        {{!--Uranus icon with label--}}
+        <a href="/planet/7" style="text-align:center; color: grey;">
+          <img src="/images/planets/Uranus.gif" style="width:40px; height:40px; border-radius:50%;">
+          <div style="font-size:0.7em;">Uranus</div>
+        </a>
+
+        {{!--Neptune icon with label--}}
+        <a href="/planet/8" style="text-align:center; color: grey;">
+          <img src="/images/planets/Neptune.gif" style="width:40px; height:40px; border-radius:50%;">
+          <div style="font-size:0.7em;">Neptune</div>
+        </a>
+
       </div>
     </div>
 
@@ -34,7 +75,7 @@
 
     <div class="eight wide column">
       <div class="ui raised segment" style="padding: 1px;">
-       <img class="ui fluid rounded image" src="{{planet.gif}}" style="height: 400px; object-fit: cover;">
+        <img class="ui fluid rounded image" src="{{planet.gif}}" style="height: 400px; object-fit: cover;">
       </div>
     </div>
 
@@ -51,10 +92,10 @@
           <div class="item"><strong>Orbital Speed:</strong> {{planet.orbitalSpeed}}</div>
           <div class="item"><strong>Moons:</strong> {{planet.moonStats}}</div>
         </div>
+
         <div class="ui segment">
-  
-  <p>{{planet.fact}}</p>
-</div>
+          <p>{{planet.fact}}</p>
+        </div>
       </div>
     </div>
 

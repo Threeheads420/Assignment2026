@@ -24,6 +24,36 @@
       "id": "1777806502234",
       "email": "asdfgh@gmail.com",
       "password": "123456"
+    },
+    {
+      "id": "1777817481850",
+      "email": "weare@gmail.com",
+      "password": "0987654321"
+    },
+    {
+      "id": "1777846472056",
+      "email": "sdfg@dfg",
+      "password": "23456"
+    },
+    {
+      "id": "1777846516187",
+      "email": "we@gmail.com",
+      "password": "1234567"
+    },
+    {
+      "id": "1777886160549",
+      "email": "wert@yahoo.com",
+      "password": "wert"
+    },
+    {
+      "id": "1777887697353",
+      "email": "trish@me",
+      "password": "098"
+    },
+    {
+      "id": "1777888904131",
+      "email": "ui@ui",
+      "password": "1234"
     }
   ]
 }

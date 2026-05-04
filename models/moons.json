@@ -33,28 +33,6 @@
     "id": "4"
   },
   {
-    "name": "Miranda",
-    "planet": "Uranus",
-    "distance": "129,900 km",
-    "diameter": "471 km",
-    "discoveredBy": "Gerard Kuiper",
-    "yearDiscovered": "1948",
-    "courtesy": "NASA",
-    "image": "/images/moons/miranda.jpg",
-    "id": "9"
-  },
-  {
-    "name": "Ariel",
-    "planet": "Uranus",
-    "distance": "191,000km",
-    "diameter": "1,158km",
-    "discoveredBy": "William Lassell",
-    "yearDiscovered": "1851",
-    "courtesy": "NASA",
-    "image": "/images/moons/ariel.webp",
-    "id": "10"
-  },
-  {
     "name": "Ganymede",
     "planet": "Jupiter",
     "distance": "1070400",
@@ -64,29 +42,5 @@
     "courtesy": "Nasa/ESA",
     "image": "/images/moons/Ganymedee.webp",
     "id": "6"
-  },
-  {
-    "name": "Callisto",
-    "planet": "Jupiter",
-    "distance": "1,882,700 km",
-    "diameter": "4,8211 km",
-    "discoveredBy": "Galileo Galilei",
-    "yearDiscovered": "1610",
-    "courtesy": "NASA",
-    "credit": "Steve",
-    "image": "/images/moons/Callisto.jpg",
-    "id": "7"
-  },
-  {
-    "name": "REX",
-    "planet": "Pluto",
-    "distance": "Unknown",
-    "diameter": "ask an astrolger",
-    "discoveredBy": "Gerard Kuiper",
-    "yearDiscovered": "1985",
-    "courtesy": "Nasa/ESA",
-    "credit": "Danny",
-    "image": "/images/moons/Uranus.gif",
-    "id": "8"
   }
 ]

@@ -1,47 +1,83 @@
 <nav class="ui inverted stackable menu">
 
+  <!-- Home link -->
   <a id="home" href="/" class="item">
     <i class="home icon"></i>
     Home
   </a>
 
-  <a id="dashboard" href="/dashboard" class="item">
-    <i class="grid layout icon"></i>
-    Planets of The Solar System
-  </a>
-
+  <!-- About page link -->
   <a id="about" href="/about" class="item">
     <i class="info circle icon"></i>
     About
   </a>
 
+  <!-- Dashboard (planets) page -->
+  <a id="dashboard" href="/dashboard" class="item">
+    <i class="grid layout icon"></i>
+    Planets of The Solar System
+  </a>
+
+  <!-- Moons page -->
   <a id="moons" href="/moons" class="item">
     <i class="moon icon"></i>
     Moons
   </a>
-  {{!--full screen button--}}
- <a class="item" onclick="openFullscreen()">
-  <i class= >Full Screen</i>
-</a>
+
+  <!-- Full screen button -->
+  <a class="item" onclick="openFullscreen()">
+    <i class="expand icon"></i>
+    Full Screen
+  </a>
+
+  <!-- RIGHT SIDE MENU (auth + controls) -->
   <div class="right menu">
+
+    <!-- Sign up button -->
     <a href="/signup" class="item">
       <i class="user plus icon"></i>
       Sign Up
     </a>
 
+    <!-- Login button -->
     <a href="/login" class="item">
       <i class="sign in alternate icon"></i>
       Login
     </a>
 
+    <!-- Logout button -->
     <a href="/logout" class="item">
       <i class="sign out alternate icon"></i>
       Logout
     </a>
-  </div>
 
+    <!-- MUSIC CONTROLS -->
+    <!-- Placed inside the right menu so it aligns with login/logout -->
+    <div class="item" style="display: flex; align-items: center; gap: 6px;">
+
+      <!-- Button to turn music on/off -->
+      <button id="music-toggle" class="ui button">
+        Music Off
+      </button>
+
+      <!-- Volume slider (0 = silent, 1 = full volume) -->
+      <input 
+        id="music-volume" 
+        type="range" 
+        min="0" 
+        max="1" 
+        step="0.1" 
+        value="0.5" 
+        style="width:80px;"
+      >
+
+    </div>
+
+  </div>
 </nav>
 
 <script>
+  // Highlights the current page in the menu
+  // The {{id}} value is passed from each page controller
   document.querySelector("#{{id}}")?.classList.add("active");
 </script>

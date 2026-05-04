@@ -1,19 +1,22 @@
 {{> menu}}
-
+<div class="ui container">
 <div class="ui raised segment" style="margin-top: 1.5rem;">
   <div class="ui stackable two column grid">
 
     <div class="eight wide column">
+      {{!--Displays the main page header with icon and moon name--}}
       <h1 class="ui header">
         <i class="moon icon"></i>
         <div class="content">
-          Steve’s App – Moon Tracker
+          Steve’s Moon Tracker
+          {{!--Shows the moon name and the planet it orbits--}}
           <div class="sub header">{{moon.name}} | Orbits {{moon.planet}}</div>
         </div>
       </h1>
     </div>
 
     <div class="eight wide column" style="display: flex; align-items: center; justify-content: center;">
+      {{!--Navigation icons linking to each planet page--}}
       <div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
         <a href="/planet/1"><img src="/images/planets/Mercury.gif" style="width:40px; height:40px; border-radius:50%;"></a>
         <a href="/planet/2"><img src="/images/planets/Venus.gif" style="width:40px; height:40px; border-radius:50%;"></a>
@@ -34,6 +37,7 @@
 
     <div class="eight wide column">
       <div class="ui raised segment" style="padding: 1px;">
+        {{!--Displays the moon image--}}
         <img class="ui fluid rounded image" src="{{moon.image}}" style="height: 400px; object-fit: cover;">
       </div>
     </div>
@@ -41,39 +45,53 @@
     <div class="eight wide column">
       <div class="ui raised segment">
 
+        {{!--Adds a label to clearly identify this section as moon details--}}
+        <h3 class="ui header">Moon Details</h3>
+
+        {{!--Displays the moon name--}}
         <h3 class="ui header">{{moon.name}}</h3>
+
+        {{!--Displays which planet the moon orbits--}}
         <p><strong>Orbits:</strong> {{moon.planet}}</p>
 
+        {{!--Displays description only if it exists--}}
         {{#if moon.description}}
           <p><strong>Description:</strong><br>{{moon.description}}</p>
         {{/if}}
 
+        {{!--Displays distance from planet if provided--}}
         {{#if moon.distance}}
           <p><strong>Distance from Planet:</strong> {{moon.distance}}</p>
         {{/if}}
 
+        {{!--Displays diameter if provided--}}
         {{#if moon.diameter}}
           <p><strong>Diameter:</strong> {{moon.diameter}}</p>
         {{/if}}
 
+        {{!--Displays who discovered the moon if available--}}
         {{#if moon.discoveredBy}}
           <p><strong>Discovered By:</strong> {{moon.discoveredBy}}</p>
         {{/if}}
 
+        {{!--Displays year of discovery if available--}}
         {{#if moon.yearDiscovered}}
           <p><strong>Year Discovered:</strong> {{moon.yearDiscovered}}</p>
         {{/if}}
 
+        {{!--Displays image courtesy information if provided--}}
         {{#if moon.courtesy}}
           <p><strong>Image Courtesy Of:</strong> {{moon.courtesy}}</p>
         {{/if}}
 
+        {{!--Displays uploader credit if provided--}}
         {{#if moon.credit}}
           <p><strong>Uploaded By:</strong> {{moon.credit}}</p>
         {{/if}}
 
         <div class="ui divider"></div>
 
+        {{!--Button linking back to the planet this moon orbits--}}
         <a href="{{planetLink}}" class="ui primary button">
           Go to {{moon.planet}}
         </a>
@@ -82,4 +100,5 @@
     </div>
 
   </div>
+</div>
 </div>

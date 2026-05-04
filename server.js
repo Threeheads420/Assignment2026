@@ -31,6 +31,13 @@ app.use(session({
   resave: false,
   saveUninitialized: false
 }));
+//Makes the logged-in user available to all Handlebars views.
+//This means we can use {{#if user}} in any .hbs file
+//without needing to pass the user from every controller manually.
+app.use((request, response, next) => {
+  response.locals.user = request.session.user;
+  next();
+});
 // Creates the Handlebars engine with the .hbs file extension.
 const handlebars = create({extname: '.hbs'});
 // Registers Handlebars as the template engine.

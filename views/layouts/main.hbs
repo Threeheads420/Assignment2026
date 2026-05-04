@@ -1,33 +1,81 @@
 <html lang="en">
   <head>
-    <!-- Character encoding for the webpage -->
     <meta charset="utf-8" />
-    <!-- Ensures the page scales correctly on mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- Page title shown in the browser tab -->
     <title>{{title}}</title>
-    
-        <!-- Import the Fomantic UI stylesheet for layout and UI components -->
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.4/dist/semantic.min.css">
-   
-    <!-- Import the custom stylesheet for this application -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.4/dist/semantic.min.css">
     <link rel="stylesheet" href="/style.css">   
   </head>
-  
+
   <body>
-    <!-- Main container where Handlebars renders page content -->
     <section class="ui container">
       {{{body}}}
     </section>
-    
-    <!-- import the jQuery library used by fomantic UI -->
+
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
-    
-    <!-- import the SemanticUI javascript file -->
     <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.4/dist/semantic.min.js"></script>
-    
-    <!-- Import the custom JavaScript file for this application -->
     <script src="/script.js"></script>
-    
+
+   <!-- BACKGROUND MUSIC -->
+<audio autoplay loop muted id="bg-music">
+  <source src="/audio/planetsSoundTrack.mp3" type="audio/mpeg">
+</audio>
+
+<!-- FLOATING MUSIC CONTROL BUTTON -->
+<div id="music-control">
+  <button id="music-toggle">🔇</button>
+  <input id="music-volume" type="range" min="0" max="1" step="0.1" value="0.5">
+</div>
+
+<script>
+  // Gets the music player from the page
+  const audio = document.getElementById("bg-music");
+
+  // Gets the on/off button
+  const toggleButton = document.getElementById("music-toggle");
+
+  // Gets the volume slider
+  const volumeSlider = document.getElementById("music-volume");
+
+  // Loads saved volume, or uses 0.5 if no saved volume exists
+  audio.volume = localStorage.getItem("musicVolume") || 0.5;
+  volumeSlider.value = audio.volume;
+
+  // Checks if music was previously turned on
+  if (localStorage.getItem("musicAllowed") === "yes") {
+    audio.muted = false;
+    toggleButton.textContent = "🔊";
+    audio.play().catch(() => {});
+  }
+
+  // First click anywhere allows music to start
+  document.addEventListener("click", () => {
+    audio.muted = false;
+    audio.play();
+    localStorage.setItem("musicAllowed", "yes");
+    toggleButton.textContent = "🔊";
+  }, { once: true });
+
+  // Turns music on or off when button is clicked
+  toggleButton.addEventListener("click", () => {
+    if (audio.muted) {
+      audio.muted = false;
+      audio.play();
+      localStorage.setItem("musicAllowed", "yes");
+      toggleButton.textContent = "🔊";
+    } else {
+      audio.muted = true;
+      localStorage.setItem("musicAllowed", "no");
+      toggleButton.textContent = "🔇";
+    }
+  });
+
+  // Changes the volume when slider moves
+  volumeSlider.addEventListener("input", () => {
+    audio.volume = volumeSlider.value;
+    localStorage.setItem("musicVolume", volumeSlider.value);
+  });
+</script>
   </body>
 </html>

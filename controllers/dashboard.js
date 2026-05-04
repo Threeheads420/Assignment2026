@@ -7,7 +7,7 @@ export const dashboardController = {
     //viewData passes data to handlebars view(dashboard.hbs).
     const viewData = {
       //Page title in the browser tab.
-      title: "Steve's App-Planet Tracker",
+      title: "Steve's Planet Tracker",
       //Loads all planet data from JSON store.
       planets: planetStoreModel.getAllPlanets(),
     };

@@ -1,60 +1,114 @@
 {{> menu}}
 
-<h1 class="ui center aligned header"
-{{!--changed colour and added text shadow to make it more visible--}}
-style= "color: grey; text-shadow: 2px 2px 6px  blue;">{{title}}</h1>
-<div class="ui center aligned container" style="margin-bottom: 1rem;">
-  <form class="ui form" action="/moons/search" method="POST">
-    <div class="ui action input">
-      <input type="text" name="searchTerm" placeholder="Search moons by name">
-      <button class="ui button" type="submit">Search</button>
+{{!--Displays the page title with custom colour and shadow for visibility--}}
+{{!--<h1 class="ui center aligned header"
+    style="color: grey; text-shadow: 2px 2px 6px blue;">
+  {{title}}
+</h1>--}}
+
+{{!--Search form allowing users to search moons by name--}}
+<div class="ui raised segment" style="margin-top: 1.5rem;">
+  <div class="ui stackable two column grid">
+
+    {{!--LEFT: Page title--}}
+    <div class="eight wide column">
+      <h1 class="ui header">
+        <i class="moon icon"></i>
+        <div class="content">
+          Steve’s Moon Tracker
+          <div class="sub header">Browse and manage moon records</div>
+        </div>
+      </h1>
     </div>
-  </form>
-</div>
-<div class="ui center aligned container" style="margin-bottom: 1rem;">
-  <a href="/moons/add" class="ui primary button">Add a new moon</a>
+
+    {{!--RIGHT: Search and add controls--}}
+    <div class="eight wide column" style="display: flex; align-items: center; justify-content: center;">
+      <div style="display: flex; gap: 10px; justify-content: center; align-items: center;">
+
+        <form class="ui form" action="/moons/search" method="POST" style="margin: 0;">
+          <div class="ui action input">
+            <input type="text" name="searchTerm" placeholder="Search moons by name">
+            <button class="ui button" type="submit">Search</button>
+          </div>
+        </form>
+
+        <a href="/moons/add" class="ui primary button">Add a new moon</a>
+
+      </div>
+    </div>
+
+  </div>
 </div>
 
+{{!--Container holding all moon cards--}}
 <div class="ui container">
   <div class="ui four doubling stackable cards">
 
+    {{!--Loops through all moons and displays each one as a card--}}
     {{#each moons}}
       <div class="ui card">
 
+        {{!--Displays the moon image--}}
         <div class="image">
           <img src="{{image}}">
         </div>
+
+        {{!--Displays moon name and orbiting planet--}}
         <div class="content">
-  <div class="header">{{name}}</div>
-  <div class="meta">Orbits {{planet}}</div>
- {{#if credit}}
-  <div style="font-size: 0.75em; color: grey;">
-    {{credit}}
-  </div>
-{{/if}}
-</div>
+          <div class="header">{{name}}</div>
+          <div class="meta">Orbits {{planet}}</div>
+
+          {{!--Displays uploader credit if available--}}
+          {{#if credit}}
+            <div style="font-size: 0.75em; color: grey;">
+              {{credit}}
+            </div>
+          {{/if}}
+        </div>
+
+        {{!--Bottom section containing actions and navigation--}}
         <div class="extra content">
-  <div style="display: flex; align-items: center; justify-content: space-between; gap: 6px;">
-    
-    <div style="display: flex; align-items: center; gap: 8px;">
-      <a href="/moons/edit/{{id}}" class="ui icon button">
-        <i class="edit icon"></i>
-      </a>
-      <a href="/moons/delete/{{id}}" class="ui icon button">
-        <i class="trash icon"></i>
-      </a>
-    </div>
-    <div style="display: flex; align-items: center; gap: 6px;">
-      <span style="font-size: 0.8em;">More info</span>
-      <i class="arrow right icon"></i>
-      <a class="ui basic icon button" href="/moons/{{id}}">
-        <i class="info circle icon"></i>
-      </a>
-      
-    </div>
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 6px;">
+            
+            {{!--Edit/Delete buttons--}}
+            {{#if ../user}}
+              {{!--If user is logged in, show real edit/delete links--}}
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <a href="/moons/edit/{{id}}" class="ui icon button">
+                  <i class="edit icon"></i>
+                </a>
+                <a href="/moons/delete/{{id}}" class="ui icon button">
+                  <i class="trash icon"></i>
+                </a>
+              </div>
+            {{else}}
+              {{!--If user is not logged in, show buttons that trigger a popup instead--}}
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <button class="ui icon button"
+                        onclick="alert('You must sign up or log in before you can edit or delete moons.');">
+                  <i class="edit icon"></i>
+                </button>
+                <button class="ui icon button"
+                        onclick="alert('You must sign up or log in before you can edit or delete moons.');">
+                  <i class="trash icon"></i>
+                </button>
+              </div>
+            {{/if}}
+
+            {{!--More info link to view individual moon page--}}
+            <div style="display: flex; align-items: center; gap: 6px;">
+              <span style="font-size: 0.8em;">More info</span>
+              <i class="arrow right icon"></i>
+              <a class="ui basic icon button" href="/moons/{{id}}">
+                <i class="info circle icon"></i>
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    {{/each}}
 
   </div>
 </div>
-
-</div>
-{{/each}}

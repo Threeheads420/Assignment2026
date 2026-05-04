@@ -15,6 +15,7 @@ export const moonController = {
     const viewData = {
       title: "Moons",
       moons: moons,
+      user: request.session.user
     };
 
     logger.info("moon list");
@@ -25,14 +26,14 @@ export const moonController = {
   addForm(request, response) {
 
     //Redirects to login if no user session exists.
-    if (!request.session.user) {
-      return response.redirect("/login");
-    }
-
-    const viewData = {
+   // if (!request.session.user) {
+     // return response.redirect("/login");
+      
+        const viewData = {
       title: "Add a Moon",
+      error: request.query.error
+      
     };
-
     response.render("add-moon", viewData);
   },
 
@@ -50,7 +51,7 @@ export const moonController = {
     );
 
     if (existingMoon) {
-      return response.send("We already have a moon with that name! Please choose a different name.");
+      return response.redirect("/moons/add?error=duplicate");
     }
 
     //Creates the new moon object from form data.
@@ -96,6 +97,7 @@ export const moonController = {
     const viewData = {
       title: "Edit Moon",
       moon: moon,
+       user: request.session.user
     };
 
     response.render("edit-moon", viewData);
@@ -135,6 +137,7 @@ export const moonController = {
     const viewData = {
       title: "Moons",
       moons: moons,
+      user: request.session.user
     };
 
     response.render("moons", viewData);

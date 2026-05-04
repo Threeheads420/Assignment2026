@@ -1,21 +1,29 @@
 {{> menu}}
 
-<div class="ui container" style="margin-top: 1.5rem;">
+<div class="ui container auth-page">
   <div class="ui raised segment">
+
+    {{!--Displays the page title for the login form--}}
     <h1 class="ui header">Login</h1>
 
+    {{!--Login form that sends email and password to the server for authentication--}}
     <form class="ui form" action="/login" method="POST" autocomplete="off">
+
+      {{!--Email input field--}}
       <div class="field">
         <label>Email</label>
         <input type="email" name="email" required autocomplete="off">
       </div>
 
+      {{!--Password input field--}}
       <div class="field">
         <label>Password</label>
         <input type="password" name="password" required autocomplete="current-password">
       </div>
 
+      {{!--Submit button to log the user in--}}
       <button class="ui primary button" type="submit">Login</button>
+
     </form>
   </div>
 </div>

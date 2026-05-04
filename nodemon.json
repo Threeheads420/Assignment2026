@@ -1,0 +1,4 @@
+{
+  "comment": "Nodemon is a tool that automatically restarts the server whenever it detects file changes. This is useful during development, but it was restarting the server when moons.json changed (after adding a moon), which caused the user session to be lost and forced a logout. This ignore rule prevents nodemon from restarting when moons.json is updated.",
+  "ignore": ["models/moons.json"]
+}

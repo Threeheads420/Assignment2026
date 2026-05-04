@@ -1,56 +1,91 @@
 {{>menu}}
 
-<div class="ui raised segment">
-  <h1 class="ui center aligned header">
-    <i class="info circle icon"></i>
-    <div class="content">
-      {{title}}
-      <div class="sub header">{{site.title}}</div>
-    </div>
-  </h1>
+{{!--TOP SECTION: Header with title on left and real-world moon info on right--}}
+<div class="ui raised segment" style="margin-top: 1.5rem;">
 
-  {{#each site.intro}}
-    <p class="ui center aligned">{{this}}</p>
-  {{/each}}
-<div class="ui raised segment">
-  <h2 class="ui header">App Statistics</h2>
+  <div class="ui stackable two column grid">
 
-  <div class="ui four statistics">
-    <div class="statistic">
-      <div class="value">{{stats.totalPlanets}}</div>
-      <div class="label">Planets</div>
+    {{!--LEFT: About page title--}}
+    <div class="eight wide column">
+      <h1 class="ui header">
+        <i class="info circle icon"></i>
+        <div class="content">
+          Steve's About Page
+          <div class="sub header">Planet Tracker</div>
+        </div>
+      </h1>
     </div>
 
-    <div class="statistic">
-      <div class="value">{{stats.totalMoons}}</div>
-      <div class="label">Moons</div>
+    {{!--RIGHT: Real-world moon information--}}
+    <div class="eight wide column" style="display:flex; align-items:center; justify-content:flex-end; text-align:right;">
+      <div style="font-size:0.9em; color: grey;">
+        As of 2026, over 200 moons are known in our Solar System.<br> More still being discovered as we contine exploring The Solar System.
+      </div>
     </div>
 
-    <div class="statistic">
-      <div class="value">{{stats.terrestrialPlanets}}</div>
-      <div class="label">Terrestrial</div>
-    </div>
-
-    <div class="statistic">
-      <div class="value">{{stats.giantPlanets}}</div>
-      <div class="label">Giants</div>
-    </div>
   </div>
-</div>
-  
 
+  {{!--APP STATISTICS SECTION--}}
+  <div class="ui raised segment">
+    <h2 class="ui header">App Statistics</h2>
+
+    <div class="ui four statistics">
+
+      {{!--Total planets in the app--}}
+      <div class="statistic">
+        <div class="value">{{stats.totalPlanets}}</div>
+        <div class="label">Planets</div>
+      </div>
+
+      {{!--Number of terrestrial planets--}}
+      <div class="statistic">
+        <div class="value">{{stats.terrestrialPlanets}}</div>
+        <div class="label">Terrestrial Planets</div>
+      </div>
+
+      {{!--Number of giant planets--}}
+      <div class="statistic">
+        <div class="value">{{stats.giantPlanets}}</div>
+        <div class="label">Giant Planets</div>
+      </div>
+
+      {{!--Number of moons currently stored in the app--}}
+      <div class="statistic">
+        <div class="value">{{stats.totalMoons}}</div>
+        <div class="label">Moons in App</div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+{{!--SECTION: Explanation of the app--}}
+<div class="ui raised segment">
+  <h2 class="ui header">What is Steve's Planet Tracker about?</h2>
+
+  {{!--Intro paragraphs loaded from data--}}
+  {{#each site.intro}}
+    <p>{{this}}</p>
+  {{/each}}
+
+</div>
+
+{{!--SECTION: Vastness of space--}}
+<div class="ui raised segment">
   <h2 class="ui header">{{vastness.heading}}</h2>
 
   <div class="ui stackable grid">
     
-    <!-- LEFT SIDE (text) -->
+    {{!--LEFT: Descriptive paragraphs--}}
     <div class="ten wide column">
       {{#each vastness.paragraphs}}
         <p>{{this}}</p>
       {{/each}}
     </div>
 
-    <!-- RIGHT SIDE  -->
+    {{!--RIGHT: Scale summary list--}}
     <div class="six wide column">
       <div class="ui raised segment">
         <h3 class="ui header">
@@ -75,17 +110,21 @@
   </div>
 </div>
 
-  {{#each scaleStory}}
-    <div class="ui raised segment">
-      <h3 class="ui header">{{title}}</h3>
-      <img class="ui fluid rounded image" src="{{image}}">
-      <p style="margin-top: 1rem;">{{{caption}}}</p>
-    </div>
-  {{/each}}
+{{!--SECTION: Image story showing scale of the universe--}}
+{{#each scaleStory}}
+  <div class="ui raised segment">
+    <h3 class="ui header">{{title}}</h3>
 
-</div>
+    {{!--Image representing each scale step--}}
+    <img class="ui fluid rounded image" src="{{image}}">
 
-<div style="margin-top:20px; font-size:0.9em; text-align:center;">
+    {{!--Caption describing the image--}}
+    <p style="margin-top: 1rem;">{{{caption}}}</p>
+  </div>
+{{/each}}
+
+{{!--FOOTER CREDIT--}}
+<div class="ui raised segment" style="margin-top: 1.5rem; text-align: center;">
   Astronomy images courtesy of
   <a href="https://www.nasa.gov/" target="_blank">NASA</a>
 </div>
