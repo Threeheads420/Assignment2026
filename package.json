@@ -4,13 +4,22 @@
   "description": "CA1 Planet app",
   "type": "module",
   "main": "server.js",
+
+  "_comment": "Forces Render to use Node 18 because express-handlebars is not compatible with Node 22 (default on Render)",
+
+  "engines": {
+    "node": "18.x"
+  },
+
   "scripts": {
     "start": "nodemon server.js"
   },
+
   "keywords": [
     "node",
     "express"
   ],
+
   "dependencies": {
     "express": "^5.2.1",
     "express-handlebars": "^8.0.4",
@@ -19,6 +28,7 @@
     "multer": "^2.1.1",
     "winston": "^3.19.0"
   },
+
   "devDependencies": {
     "nodemon": "^3.1.11"
   }
