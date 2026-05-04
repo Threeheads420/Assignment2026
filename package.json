@@ -8,11 +8,11 @@
   "_comment": "Forces Render to use Node 18 because express-handlebars is not compatible with Node 22 (default on Render)",
 
   "engines": {
-    "node": "18.x"
+    "node": "18.20.8"
   },
 
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "node server.js"
   },
 
   "keywords": [
