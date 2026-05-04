@@ -17,7 +17,10 @@ const login = {
     }
 
     // Stores the logged-in user in the session
-    request.session.user = user;
+    request.session.user = {
+  id: user.id,
+  firstName: user.firstName
+};
 
     // Saves the session BEFORE redirecting
     // This prevents the session being lost on the next request

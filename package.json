@@ -4,31 +4,26 @@
   "description": "CA1 Planet app",
   "type": "module",
   "main": "server.js",
-
-
-
   "engines": {
     "node": "18.20.8"
   },
-
   "scripts": {
     "start": "node server.js"
   },
-
   "keywords": [
     "node",
     "express"
   ],
-
   "dependencies": {
+    "cloudinary": "^1.41.3",
     "express": "^5.2.1",
     "express-handlebars": "7.1.3",
     "express-session": "^1.19.0",
     "lowdb": "^7.0.1",
     "multer": "^2.1.1",
+    "multer-storage-cloudinary": "^4.0.0",
     "winston": "^3.19.0"
   },
-
   "devDependencies": {
     "nodemon": "^3.1.11"
   }

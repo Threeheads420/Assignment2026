@@ -40,5 +40,19 @@ searchMoons(searchTerm) {
     moon.planet.toLowerCase().includes(term)
   );
 },
+getUserMoons(userid) {
+  const moons = this.getAllMoons();
+  return moons.filter(moon => moon.userid === userid);
+},
+
+searchUserMoons(searchTerm, userid) {
+  const moons = this.getUserMoons(userid);
+  const term = searchTerm.trim().toLowerCase();
+
+  return moons.filter(moon =>
+    moon.name.toLowerCase().includes(term) ||
+    moon.planet.toLowerCase().includes(term)
+  );
+},
 };
 export default moonStore;

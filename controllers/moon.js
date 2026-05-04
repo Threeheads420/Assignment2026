@@ -10,10 +10,10 @@ export const moonController = {
     let moons;
 
     if (request.query.search) {
-      moons = moonStore.searchMoons(request.query.search);
-    } else {
-      moons = moonStore.getAllMoons();
-    }
+  moons = moonStore.searchUserMoons(request.query.search, request.session.user.id);
+} else {
+  moons = moonStore.getUserMoons(request.session.user.id);
+}
 
     const viewData = {
       title: "Moons",
@@ -40,15 +40,16 @@ export const moonController = {
       return response.redirect("/login");
     }
 
-    const existingMoon = moonStore.getAllMoons().find(
-      moon => moon.name.toLowerCase() === request.body.name.toLowerCase()
-    );
+    const existingMoon = moonStore.getUserMoons(request.session.user.id).find(
+  moon => moon.name.toLowerCase() === request.body.name.toLowerCase()
+);
 
     if (existingMoon) {
       return response.redirect("/moons/add?error=duplicate");
     }
 
     const newMoon = {
+       userid: request.session.user.id,
       name: request.body.name,
       planet: request.body.planet,
       distance: request.body.distance,
@@ -57,7 +58,8 @@ export const moonController = {
       yearDiscovered: request.body.yearDiscovered,
       courtesy: request.body.courtesy,
       credit: request.body.credit,
-      image: `/images/moons/${request.file.filename}`,
+      // Store the Cloudinary image URL instead of local file path
+      image: request.file.path,
     };
 
     moonStore.addMoon(newMoon);
@@ -98,6 +100,7 @@ export const moonController = {
 
     const updatedMoon = {
       id: request.params.id,
+      userid: request.session.user.id, 
       name: request.body.name,
       planet: request.body.planet,
       distance: request.body.distance,

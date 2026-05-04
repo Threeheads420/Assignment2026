@@ -47,15 +47,15 @@ router.get('/', start.createView);
 
 // Route for the dashboard page.
 // Displays the list of all planets using the dashboard controller.
-router.get('/dashboard', dashboardController.index);
+router.get('/dashboard', requireLogin, dashboardController.index);
 
 // Route for the about page.
 // Displays information about the app and statistics.
-router.get('/about', aboutController.index);
+router.get('/about', requireLogin, aboutController.index);
 
 // Route for an individual planet page.
 // ":id" is a route parameter used to identify which planet to display.
-router.get("/planet/:id", planetController.index);
+router.get("/planet/:id", requireLogin, planetController.index);
 
 // Route for searching moons.
 // Handles form submission and filters moons based on the search term entered by the user.
@@ -63,23 +63,23 @@ router.get("/planet/:id", planetController.index);
 
 // Route to display the edit form for a specific moon.
 // ":id" identifies which moon is being edited.
-router.get("/moons/edit/:id", moonController.editForm);
+router.get("/moons/edit/:id", requireLogin, moonController.editForm);
 
 // Route to update a moon after editing.
 // Receives updated data from the edit form and saves changes.
-router.post("/moons/edit/:id", moonController.update);
+router.post("/moons/edit/:id", requireLogin, moonController.update);
 
 // Route for the moons page.
 // Displays all moons in the collection.
-router.get("/moons", moonController.index);
+router.get("/moons", requireLogin, moonController.index);
 
 // Route to display the add moon form.
 // Allows the user to enter details for a new moon.
-router.get("/moons/add", moonController.addForm);
+router.get("/moons/add", requireLogin, moonController.addForm);
 
 // Route to handle adding a new moon.
 // Uses multer to upload an image and saves the new moon to the collection.
-router.post("/moons/add", upload.single("image"), moonController.add);
+router.post("/moons/add", requireLogin, upload.single("image"), moonController.add);
 // Route to handle signup.
 // Saves the new user details and redirects to login.
 router.post("/signup", signup.createUser);
@@ -110,7 +110,7 @@ router.get("/moons/delete/:id", requireLogin, moonController.delete);
 
 // Route to display details for a single moon.
 // ":id" identifies which moon to display.
-router.get("/moons/:id", function(req, res) {
+router.get("/moons/:id", requireLogin, function(req, res) {
 
   // Retrieves the selected moon using its ID.
   const moon = moonStore.getMoonById(req.params.id);
