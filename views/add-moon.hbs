@@ -16,13 +16,15 @@
 <div class="ui container">
 
   {{!--Form--}}
-  <form class="ui form" action="/moons/add" method="POST" enctype="multipart/form-data" style="color: white;">
+  <form class="ui form" action="/moons/add" method="POST" enctype="multipart/form-data" autocomplete="off" style="color: white;">
+
+    
 
     {{!--ROW 1--}}
     <div class="two fields">
       <div class="field">
         <label>What's the Moon's Name?</label>
-        <input type="text" name="name" required>
+        <input type="text" name="name" required autocomplete="off">
       </div>
       <div class="field">
         <label>Which Planet does it Orbit?</label>
@@ -33,7 +35,7 @@
     {{!--ROW 2--}}
     <div class="two fields">
       <div class="field">
-        <label>What's the distance from it's home Planet</label>
+        <label>What's the distance from it's home Planet?</label>
         <input type="text" name="distance">
       </div>
       <div class="field">
@@ -61,7 +63,7 @@
         <input type="file" name="image" required>
       </div>
       <div class="field">
-        <label>Who is the image courtesyof?</label>
+        <label>Who is the image courtesy of?</label>
         <input type="text" name="courtesy" required>
       </div>
     </div>

@@ -1,16 +1,19 @@
 'use strict';
 
-//Imports the moon data store.
 import moonStore from "../models/moon-store.js";
-//Imports the logger for recording activity.
 import logger from "../utils/logger.js";
 
-//Controller for all moon related routes.
 export const moonController = {
 
-  //Displays all moons.
+  // Display all moons or filtered moons
   index(request, response) {
-    const moons = moonStore.getAllMoons();
+    let moons;
+
+    if (request.query.search) {
+      moons = moonStore.searchMoons(request.query.search);
+    } else {
+      moons = moonStore.getAllMoons();
+    }
 
     const viewData = {
       title: "Moons",
@@ -22,30 +25,21 @@ export const moonController = {
     response.render("moons", viewData);
   },
 
-  //Shows the add moon form only if user is logged in.
+  // Show add form
   addForm(request, response) {
-
-    //Redirects to login if no user session exists.
-   // if (!request.session.user) {
-     // return response.redirect("/login");
-      
-        const viewData = {
+    const viewData = {
       title: "Add a Moon",
       error: request.query.error
-      
     };
     response.render("add-moon", viewData);
   },
 
-  //Adds a new moon only if user is logged in.
+  // Add moon
   add(request, response) {
-
-    //Checks user is logged in.
     if (!request.session.user) {
       return response.redirect("/login");
     }
 
-    //Checks for duplicate moon names.
     const existingMoon = moonStore.getAllMoons().find(
       moon => moon.name.toLowerCase() === request.body.name.toLowerCase()
     );
@@ -54,7 +48,6 @@ export const moonController = {
       return response.redirect("/moons/add?error=duplicate");
     }
 
-    //Creates the new moon object from form data.
     const newMoon = {
       name: request.body.name,
       planet: request.body.planet,
@@ -72,45 +65,37 @@ export const moonController = {
     response.redirect("/moons");
   },
 
-  //Deletes a moon only if user is logged in.
+  // Delete moon
   delete(request, response) {
-
     if (!request.session.user) {
       return response.redirect("/login");
     }
 
-    const id = request.params.id;
-    moonStore.deleteMoon(id);
-
+    moonStore.deleteMoon(request.params.id);
     response.redirect("/moons");
   },
 
-  //Shows edit form only if logged in.
+  // Show edit form
   editForm(request, response) {
-
     if (!request.session.user) {
       return response.redirect("/login");
     }
 
     const moon = moonStore.getMoonById(request.params.id);
 
-    const viewData = {
+    response.render("edit-moon", {
       title: "Edit Moon",
       moon: moon,
-       user: request.session.user
-    };
-
-    response.render("edit-moon", viewData);
+      user: request.session.user
+    });
   },
 
-  //Updates moon only if logged in.
+  // Update moon
   update(request, response) {
-
     if (!request.session.user) {
       return response.redirect("/login");
     }
 
-    //Builds updated moon object.
     const updatedMoon = {
       id: request.params.id,
       name: request.body.name,
@@ -124,23 +109,7 @@ export const moonController = {
     };
 
     moonStore.updateMoon(updatedMoon);
-
     response.redirect("/moons");
-  },
-
-  //Searches moons by name.
-  search(request, response) {
-
-    const searchTerm = request.body.searchTerm;
-    const moons = moonStore.searchMoons(searchTerm);
-
-    const viewData = {
-      title: "Moons",
-      moons: moons,
-      user: request.session.user
-    };
-
-    response.render("moons", viewData);
-  },
+  }
 
 };

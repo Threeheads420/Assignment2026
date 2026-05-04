@@ -25,9 +25,9 @@
     <div class="eight wide column" style="display: flex; align-items: center; justify-content: center;">
       <div style="display: flex; gap: 10px; justify-content: center; align-items: center;">
 
-        <form class="ui form" action="/moons/search" method="POST" style="margin: 0;">
+        <form class="ui form" action="/moons" method="GET" style="margin: 0;">
           <div class="ui action input">
-            <input type="text" name="searchTerm" placeholder="Search moons by name">
+            <input type="text" name="search" placeholder="Search Planets & Moons">
             <button class="ui button" type="submit">Search</button>
           </div>
         </form>
@@ -50,8 +50,8 @@
 
         {{!--Displays the moon image--}}
         <div class="image">
-          <img src="{{image}}">
-        </div>
+  <img src="{{image}}" style="height: 220px; width: 100%; object-fit: cover;">
+</div>
 
         {{!--Displays moon name and orbiting planet--}}
         <div class="content">

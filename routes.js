@@ -59,7 +59,7 @@ router.get("/planet/:id", planetController.index);
 
 // Route for searching moons.
 // Handles form submission and filters moons based on the search term entered by the user.
-router.post("/moons/search", moonController.search);
+//router.post("/moons/search", moonController.search);
 
 // Route to display the edit form for a specific moon.
 // ":id" identifies which moon is being edited.

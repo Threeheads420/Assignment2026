@@ -33,8 +33,11 @@ updateMoon(updatedMoon) {
 },
 searchMoons(searchTerm) {
   const moons = this.getAllMoons();
+  const term = searchTerm.trim().toLowerCase();
+
   return moons.filter(moon =>
-    moon.name.toLowerCase().includes(searchTerm.toLowerCase())
+    moon.name.toLowerCase().includes(term) ||
+    moon.planet.toLowerCase().includes(term)
   );
 },
 };
